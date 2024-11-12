@@ -427,7 +427,7 @@ nav ul li:hover::after {
     position: absolute;
     left: 50%;
 }footer {
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     color: #000000;
     padding: 20px;
     text-align: center;
@@ -500,6 +500,13 @@ nav ul li:hover::after {
     font-size: 16px;
     cursor: pointer;
 }
+
+.buttton:hover {
+    color: rgb(8, 0, 255);
+    background-color: #ffffff;
+    border: solid 1px blue;
+}
+
 
 .buttton:hover {
     color: rgb(8, 0, 255);
