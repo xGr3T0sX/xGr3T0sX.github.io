@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Encuesta</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="./Juan js logo.png">
+    <div class="container"></div>
+
+</head>
+<body>
+<div id="pelo" class="container">
+    <input type="checkbox" id="signup_toggle">
+    <form class="form">
+        <div class="form_front">
+            <div class="form_details">Inicia sesión.</div>
+            <input placeholder="Nombre" name="Nombre" class="input" type="email">
+            <input placeholder="Grado" name="Grado" class="input" type="text">
+            <input placeholder="Correo" class="input" name="Correo" type="text">
+            <button onclick="window.location.href='formu.html'" class="btn">Ir al Formulario</button>
+            <span class="switch">No tienes cuenta? 
+                <label class="signup_tog" for="signup_toggle">
+                    Regristrate
+                </label>
+            </span>
+        </div>
+        <div class="form_back">
+            <div class="form_details">Regristrate</div>
+            <input placeholder="Nombre" name="Nombre" class="input" type="text">
+            <input placeholder="Grado" name="Grado" class="input" type="text">
+            <input placeholder="Correo" name="Correo" class="input" type="email">
+            <input placeholder="Contraeña" name="Contraseña" class="input" type="text">
+            <button onclick="window.location.href='login.html'"  class="btn">Registrarse</button>
+            <span class="switch">Ya tienes una cuenta? 
+                <label class="signup_tog" for="signup_toggle">
+                    Inicia sesión
+                </label>
+            </span>
+        </div>
+    </form>
+</div>
+</body>
+</html>

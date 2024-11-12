@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Juan js logo.png">
+    <link rel="stylesheet" href="formu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Formulario de Encuesta</title>
+</head>
+
+<body>
+    <section class="showcase">
+        <header id="enca">
+            <div id="casa" onclick="window.location.href='index.html'" class="buton-container">
+                <button class="buton">
+                    <svg class="icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"></path>
+                    </svg>
+                </button>
+            </div>
+            <img id="jj" src="./Juan js logo.png">
+        </header>
+    </section>
+
+    <div id="pelo" class="flip-form">
+        <div class="flip-form-dentro" class="elemento" id="elemento">
+            <div class="flip-form-frente">
+                <p class="titulo">BIENVENID@ AL FORMULARIO</p>
+                <p>Ayúdanos a darle más fuerza a tu voz</p>
+            </div>
+        
+            <button class="buttton" id="botonGiro">Comenzar</button>
+            <div class="flip-form-atras">
+                <form id="surveyForm">
+                    <h1 id="jjr">JJR</h1>
+
+                    <!-- Pregunta 1 -->
+                    <div class="question active">
+                        <label for="q1">¿Te gustan las matemáticas?</label><br>
+                        <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="yes" name="q1" value="si">
+                                <label class="radio-button__label" for="yes">
+                                    <span class="radio-button__custom"></span>
+                                    Sí
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="no" name="q1" value="no">
+                                <label class="radio-button__label" for="no">
+                                    <span class="radio-button__custom"></span>
+                                    No
+                                </label>
+                            </div>
+                        </div><br><br>
+                        <button type="button" onclick="nextQuestion(0)">Siguiente</button>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="question">
+                        <label for="q2">¿Qué prefieres, Matemáticas o Inglés?</label><br>
+                        <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="Matematicas" name="q2" value="Matematicas">
+                                <label class="radio-button__label" for="Matematicas">
+                                    <span class="radio-button__custom"></span>
+                                    Matemáticas
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="ingles" name="q2" value="ingles">
+                                <label class="radio-button__label" for="ingles">
+                                    <span class="radio-button__custom"></span>
+                                    Inglés
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="Otro" name="q2" value="Otro">
+                                <label class="radio-button__label" for="Otro">
+                                    <span class="radio-button__custom"></span>
+                                    Otro
+                                </label>
+                            </div>
+                        </div><br><br>
+                        <button  type="button" id="re" onclick="previousQuestion(1)">Atrás</button>
+                        <button type="button" onclick="nextQuestion(1)">Siguiente</button>
+                    </div>
+
+                    <!-- Pregunta 3 -->
+                    <div class="question">
+                        <label for="q3">¿Con qué frecuencia estudias esa materia?</label><br>
+                        <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="daily" name="q3" value="daily">
+                                <label class="radio-button__label" for="daily">
+                                    <span class="radio-button__custom"></span>
+                                    Diario
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="weekly" name="q3" value="weekly">
+                                <label class="radio-button__label" for="weekly">
+                                    <span class="radio-button__custom"></span>
+                                    Semanal
+                                </label>
+                            </div>
+                        </div><br><br>
+                        <button  type="button" id="re" onclick="previousQuestion(2)">Atrás</button>
+                        <button type="button" onclick="finishSurvey()">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>Contacto:</p>
+            <ul>
+                <li><a href="mailto:tu_correo@example.com"><i class="fas fa-envelope"></i> Correo: jjrondon@gmail.com</a></li>
+                <li><a href="tel:+123456789"><i class="fas fa-phone"></i> Teléfono: +57 300 1234567</a></li>
+                <li><a href="https://wa.me/123456789" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp: +57 300 1234567</a></li>
+                <li><a href="https://instagram.com/tu_usuario" target="_blank"><i class="fab fa-instagram"></i> Instagram: @jjrondon</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<script>
+    let questions = document.querySelectorAll('.question');
+    
+    function nextQuestion(currentIndex) {
+        questions[currentIndex].classList.remove('active');
+        questions[currentIndex + 1].classList.add('active');
+    }
+
+    function previousQuestion(currentIndex) {
+        questions[currentIndex].classList.remove('active');
+        questions[currentIndex - 1].classList.add('active');
+    }
+
+    function finishSurvey() {
+        
+        const q1 = document.querySelector('input[name="q1"]:checked')?.value;
+        const q2 = document.querySelector('input[name="q2"]:checked')?.value;
+        const q3 = document.querySelector('input[name="q3"]:checked')?.value;
+    
+        
+        if (!q1 || !q2 || !q3) {
+            alert("Por favor, responde todas las preguntas.");
+            return;
+        }
+    
+        
+        const surveyData = { q1, q2, q3 };
+    
+        fetch('http://localhost:3000/submit-survey', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(surveyData),
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Gracias por completar la encuesta! Tus respuestas han sido guardadas.');
+            } else {
+                alert('Hubo un problema al guardar tus respuestas. Inténtalo nuevamente.');
+            }
+        })
+        .catch(error => {
+            console.error('Error al enviar los datos:', error);
+            alert('Error al enviar los datos. Verifica tu conexión y vuelve a intentarlo.');
+        });
+    }
+    
+    document.getElementById('botonGiro').addEventListener('click', function() {
+        const elemento = document.getElementById('elemento');
+        elemento.classList.toggle('girado'); 
+    });
+    
+</script>
