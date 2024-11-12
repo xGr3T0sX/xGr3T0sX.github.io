@@ -2,7 +2,7 @@
     #pelo{
         position: absolute;
         left: 200px;
-        width: 300px;
+        width: 420px;
     }
     .question.active, .radio-button, .radio-button-container, .radio-button__custom{
         font-size: medium;
@@ -506,3 +506,4 @@ nav ul li:hover::after {
     background-color: #ffffff;
     border: solid 1px blue;
 }
+
