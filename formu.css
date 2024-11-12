@@ -93,8 +93,8 @@ body, html {
     backface-visibility: hidden;
     border: 1px solid rgb(0, 60, 255);
     border-radius: 1rem;
-    background: linear-gradient(120deg, rgb(216, 216, 253) 50%, rgba(47, 0, 255, 0.825) 88%, rgb(255, 211, 195) 40%, rgb(30, 16, 227) 48%);
-    color: rgb(0, 9, 255);
+    background: linear-gradient(120deg, rgb(216, 216, 253) 50%, rgb(0, 30, 255) 88%, rgb(255, 211, 195) 40%, rgb(30, 16, 227) 48%);
+    color: blue;
 }
 
 .flip-form-atras {
@@ -507,9 +507,3 @@ nav ul li:hover::after {
     border: solid 1px blue;
 }
 
-
-.buttton:hover {
-    color: rgb(8, 0, 255);
-    background-color: #ffffff;
-    border: solid 1px blue;
-}
