@@ -425,7 +425,7 @@ nav ul li:hover::after {
     background-color: #000000;
     border-radius: 10px;
     position: absolute;
-    left: 50%;
+    left: 41%;
 }footer {
     background-color: #f0f0f0;
     color: #000000;
