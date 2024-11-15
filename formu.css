@@ -154,8 +154,9 @@ button:active {
 
 .radio-button-container {
     display: flex;
-    align-items: center;
-    gap: 24px;
+    flex-direction: column; 
+    align-items: first baseline;
+    gap: 12px;
     justify-content: center;
 }
 
@@ -219,7 +220,7 @@ button:active {
 
 .question {
     width: max-content;
-    font-size: 23px;
+    font-size: 2px;
     font-family:Roboto;
     display: none;
 }
@@ -229,49 +230,11 @@ button:active {
 }
 .question, .question.active{
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#re {
-    position: relative;
-    padding: 10px 20px;
-    border-radius: 7px;
-    border: 1px solid rgb(255, 0, 0);
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 2px;
-    background: transparent;
-    color: #ffffff;
-    overflow: hidden;
-    box-shadow: 0 0 0 0 transparent;
-    -webkit-transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-}
-
-#re:hover {
-    background: rgb(255, 41, 41);
-    box-shadow: 0 0 30px 5px rgba(255, 0, 0, 0.815);
-    color: #ffffff;
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-}
-
-#re:active {
-    box-shadow: 0 0 0 0 transparent;
-    -webkit-transition: box-shadow 0.2s ease-in;
-    -moz-transition: box-shadow 0.2s ease-in;
-    transition: box-shadow 0.2s ease-in;
-}
-#re{
-    position: absolute;
-    top: 170%;
-    right:60%;
-}
 
 a {
     color: inherit;
@@ -416,7 +379,7 @@ nav ul li:hover::after {
 }
 #jjr{
     position: absolute;
-    bottom: 85%;
+    bottom: 92%;
     left: 48%;
     font-size: 15px;
 }
@@ -425,7 +388,7 @@ nav ul li:hover::after {
     background-color: #000000;
     border-radius: 10px;
     position: absolute;
-    left: 41%;
+    left: 42%;
 }footer {
     background-color: #f0f0f0;
     color: #000000;
@@ -506,4 +469,57 @@ nav ul li:hover::after {
     background-color: #ffffff;
     border: solid 1px blue;
 }
+.question.active, .radio-button, .radio-button-container, .radio-button__custom{
+    font-size: medium;
+}
+label{
+    font-size: 16px;
+}
+input[type="text"] {
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    padding: 5px; 
+    border-radius: 10px;
+}
+::placeholder{
+    color: #000000;
+}
 
+#atras {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(255, 0, 0);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+#atras:hover {
+    background: rgb(255, 41, 41);
+    box-shadow: 0 0 30px 5px rgba(255, 0, 0, 0.815);
+    color: #ffffff;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+#atras:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+#atras{
+    position: absolute;
+    top: 170%;
+    right:60%;
+}
