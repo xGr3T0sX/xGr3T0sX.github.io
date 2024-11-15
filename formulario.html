@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Juan js logo.png">
+    <link rel="stylesheet" href="formu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Formulario de Encuesta</title>
+</head>
+
+<body>
+    <section class="showcase">
+        <header id="enca">
+            <div id="casa" onclick="window.location.href='index.html'" class="buton-container">
+                <button class="buton">
+                    <svg class="icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"></path>
+                    </svg>
+                </button>
+            </div>
+            <img id="jj" src="./Juan js logo.png">
+        </header>
+    </section>
+
+    <div id="pelo" class="flip-form">
+        <div class="flip-form-dentro" id="elemento">
+            <div class="flip-form-frente">
+                <p class="titulo">BIENVENID@ AL FORMULARIO</p>
+                <p>Ayúdanos a darle más fuerza a tu voz</p>
+            </div>
+        
+            <button class="buttton" id="botonGiro">Comenzar</button>
+            <div class="flip-form-atras">
+                <form id="surveyForm">
+                    <h1 id="jjr">JJR</h1>
+
+                    <!-- Pregunta 1 -->
+                    <div class="question active">
+                        <label for="q1">¿Cómo calificarías la calidad de la enseñanza en el colegio?</label><br>
+                        <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="excelente" name="q1" value="Excelente">
+                                <label class="radio-button__label" for="excelente">
+                                    <span class="radio-button__custom"></span>
+                                    Excelente
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="buena" name="q1" value="Buena">
+                                <label class="radio-button__label" for="buena">
+                                    <span class="radio-button__custom"></span>
+                                    Buena
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="regular" name="q1" value="Regular">
+                                <label class="radio-button__label" for="regular">
+                                    <span class="radio-button__custom"></span>
+                                    Regular
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="otra" name="q1" value="Otra">
+                                <label class="radio-button__label" for="otra">
+                                    <span class="radio-button__custom"></span>
+                                    Otra, especifica tu opinión
+                                </label>
+                            </div>
+                        </div><br><br>
+                        <button type="button" class="buton" onclick="nextQuestion(0)">Siguiente</button>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="question">
+                        <label for="q2">¿Te sientes motivado para asistir a las clases?</label><br>
+                        <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="siempre" name="q2" value="Siempre">
+                                <label class="radio-button__label" for="siempre">
+                                    <span class="radio-button__custom"></span>
+                                    Siempre
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="a veces" name="q2" value="A veces">
+                                <label class="radio-button__label" for="a veces">
+                                    <span class="radio-button__custom"></span>
+                                    A veces
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="rara vez" name="q2" value="Rara vez">
+                                <label class="radio-button__label" for="rara vez">
+                                    <span class="radio-button__custom"></span>
+                                    Rara vez
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="otra2" name="q2" value="Otra">
+                                <label class="radio-button__label" for="otra2">
+                                    <span class="radio-button__custom"></span>
+                                    Otra, especifica tu opinión
+                                </label>
+                            </div>
+                        </div><br><br>
+                        <button  type="button" class="buton" id="atras" onclick="previousQuestion(1) ">Atrás</button>
+                        <button type="button" class="buton" onclick="nextQuestion(1)">Siguiente</button>
+                    </div>
+
+                    <!-- Pregunta 3 -->
+                    <div class="question">
+                        <label for="q3">¿Consideras que las instalaciones del colegio son adecuadas para tus necesidades académicas?</label><br>
+                        <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="totalmente de acuerdo" name="q3" value="Totalmente de acuerdo">
+                                <label class="radio-button__label" for="totalmente de acuerdo">
+                                    <span class="radio-button__custom"></span>
+                                    Totalmente de acuerdo
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="de acuerdo" name="q3" value="De acuerdo">
+                                <label class="radio-button__label" for="de acuerdo">
+                                    <span class="radio-button__custom"></span>
+                                    De acuerdo
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="en desacuerdo" name="q3" value="En desacuerdo">
+                                <label class="radio-button__label" for="en desacuerdo">
+                                    <span class="radio-button__custom"></span>
+                                    En desacuerdo
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="otra3" name="q3" value="Otra">
+                                <label class="radio-button__label" for="otra3">
+                                    <span class="radio-button__custom"></span>
+                                    Otra, especifica tu opinión
+                                </label>
+                                <div id="jus"  class="radio-button">
+                                    <input type="text"  id="porq" name="q3" value="" placeholder="¿Por qué?">
+                                    
+                                </div>
+                            </div>
+                        </div><br><br>
+                        <button type="button" class="buton" id="atras" onclick="previousQuestion(2)">Atrás</button>
+                        <button type="button" class="buton" onclick="nextQuestion(2)">Siguiente</button>
+                    </div>
+
+                    <!-- Pregunta 4 -->
+                    <div class="question">
+                        <label for="q4">¿Cómo evaluarías el apoyo que recibes de los docentes?</label><br>
+                        <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="muy bueno" name="q4" value="Muy bueno">
+                                <label class="radio-button__label" for="muy bueno">
+                                    <span class="radio-button__custom"></span>
+                                    Muy bueno
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="bueno" name="q4" value="Bueno">
+                                <label class="radio-button__label" for="bueno">
+                                    <span class="radio-button__custom"></span>
+                                    Bueno
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="regular" name="q4" value="Regular">
+                                <label class="radio-button__label" for="regular">
+                                    <span class="radio-button__custom"></span>
+                                    Regular
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="no bueno" name="q4" value="No bueno">
+                                <label class="radio-button__label" for="no bueno">
+                                    <span class="radio-button__custom"></span>
+                                    Malo
+                                </label>
+                            </div>
+                            <div id="jus"  class="radio-button">
+                                <input type="text"  id="porq" name="q4" value="" placeholder="¿Por qué?">
+                                
+                            </div>
+                        </div><br><br>
+                        <button type="button" class="buton" id="atras" onclick="previousQuestion(3)">Atrás</button>
+                        <button type="button" class="buton" onclick="nextQuestion(3)">Siguiente</button>
+                    </div>
+
+                    <!-- Pregunta 5 -->
+                    <div class="question">
+                        <label for="q5">¿Qué opinas sobre la comunicación entre los estudiantes y los docentes?</label><br>
+                        <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="excelente" name="q5" value="Excelente">
+                                <label class="radio-button__label" for="excelente">
+                                    <span class="radio-button__custom"></span>
+                                    Excelente
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="buena" name="q5" value="Buena">
+                                <label class="radio-button__label" for="buena">
+                                    <span class="radio-button__custom"></span>
+                                    Buena
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="regular" name="q5" value="Regular">
+                                <label class="radio-button__label" for="regular">
+                                    <span class="radio-button__custom"></span>
+                                    Regular
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="mala" name="q5" value="Mala">
+                                <label class="radio-button__label" for="mala">
+                                    <span class="radio-button__custom"></span>
+                                    Mala
+                                </label>
+                            </div>
+                            <div id="jus"  class="radio-button">
+                                <input type="text"  id="porq" name="q5" value="" placeholder="¿Por qué?">
+                                
+                            </div>
+                        </div><br><br>
+                        <button type="button" class="buton" id="atras" onclick="previousQuestion(4)">Atrás</button>
+                        <button type="button" class="buton" onclick="nextQuestion(4)">Siguiente</button>
+                    </div>
+
+                    <!-- Pregunta 6 -->
+                    <div class="question">
+                        <label for="q6">¿Qué tan satisfecho estás con los recursos digitales disponibles para tu aprendizaje?</label><br>
+                        <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="muy satisfecho" name="q6" value="Muy satisfecho">
+                                <label class="radio-button__label" for="muy satisfecho">
+                                    <span class="radio-button__custom"></span>
+                                    Muy satisfecho
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="satisfecho" name="q6" value="Satisfecho">
+                                <label class="radio-button__label" for="satisfecho">
+                                    <span class="radio-button__custom"></span>
+                                    Satisfecho
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="insatisfecho" name="q6" value="Insatisfecho">
+                                <label class="radio-button__label" for="insatisfecho">
+                                    <span class="radio-button__custom"></span>
+                                    Insatisfecho
+                                </label>
+                            </div>
+                            <div id="jus"  class="radio-button">
+                                <input type="text"  id="porq" name="q6" value="" placeholder="¿Por qué?">
+                                
+                            </div>
+                        </div><br><br>
+                        <button type="button" class="buton" id="atras" onclick="previousQuestion(5)">Atrás</button>
+                        <button type="button" class="buton" onclick="nextQuestion(5)">Siguiente</button>
+                    </div>
+
+                    <!-- Pregunta 7 -->
+                    <div class="question">
+                        <label for="q7">¿Qué tan fácil te resulta acceder a las plataformas educativas del colegio?</label><br>
+                        <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="muy facil" name="q7" value="Muy fácil">
+                                <label class="radio-button__label" for="muy facil">
+                                    <span class="radio-button__custom"></span>
+                                    Muy fácil
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="facil" name="q7" value="Fácil">
+                                <label class="radio-button__label" for="facil">
+                                    <span class="radio-button__custom"></span>
+                                    Fácil
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="dificil" name="q7" value="Difícil">
+                                <label class="radio-button__label" for="dificil">
+                                    <span class="radio-button__custom"></span>
+                                    Difícil
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="muy dificil" name="q7" value="Muy difícil">
+                                <label class="radio-button__label" for="muy dificil">
+                                    <span class="radio-button__custom"></span>
+                                    Muy difícil
+                                </label>
+                            </div>
+                        </div><br><br>
+                        <button type="button" class="buton" id="atras" onclick="previousQuestion(6)">Atrás</button>
+                        <button type="button" class="buton" onclick="nextQuestion(6)">Siguiente</button>
+                    </div>
+
+                    <!-- Pregunta 8 -->
+                    <div class="question">
+                        <label for="q8">¿Cuánto tiempo dedicas a tus tareas fuera del horario escolar?</label><br>
+                        <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="menos de 1 hora" name="q8" value="Menos de 1 hora">
+                                <label class="radio-button__label" for="menos de 1 hora">
+                                    <span class="radio-button__custom"></span>
+                                    Menos de 1 hora
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="1-2 horas" name="q8" value="1-2 horas">
+                                <label class="radio-button__label" for="1-2 horas">
+                                    <span class="radio-button__custom"></span>
+                                    1-2 horas
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="3-4 horas" name="q8" value="3-4 horas">
+                                <label class="radio-button__label" for="3-4 horas">
+                                    <span class="radio-button__custom"></span>
+                                    3-4 horas
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="mas de 4 horas" name="q8" value="Más de 4 horas">
+                                <label class="radio-button__label" for="mas de 4 horas">
+                                    <span class="radio-button__custom"></span>
+                                    Más de 4 horas
+                                </label>
+                            </div>
+                        </div><br><br>
+                        <button type="button" class="buton" id="atras" onclick="previousQuestion(7)">Atrás</button>
+                        <button type="button" class="buton" onclick="nextQuestion(7)">Siguiente</button>
+                    </div>
+
+                    <!-- Pregunta 9 -->
+                    <div class="question">
+                        <label for="q9">¿Cómo calificarías el ambiente en la escuela (compañeros, profesores, actividades, etc.)?</label><br>
+                        <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="excelente2" name="q9" value="Excelente">
+                                <label class="radio-button__label" for="excelente2">
+                                    <span class="radio-button__custom"></span>
+                                    Excelente
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="bueno2" name="q9" value="Bueno">
+                                <label class="radio-button__label" for="bueno2">
+                                    <span class="radio-button__custom"></span>
+                                    Bueno
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="regular2" name="q9" value="Regular">
+                                <label class="radio-button__label" for="regular2">
+                                    <span class="radio-button__custom"></span>
+                                    Regular
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="malo" name="q9" value="Malo">
+                                <label class="radio-button__label" for="malo">
+                                    <span class="radio-button__custom"></span>
+                                    Malo
+                                </label>
+                            </div>
+                            <div id="jus"  class="radio-button">
+                                <input type="text"  id="porq" name="q3" value="" placeholder="¿Por qué?">
+                                
+                            </div>
+                        </div><br><br>
+                        <button type="button" class="buton" id="atras" onclick="previousQuestion(8)">Atrás</button>
+                        <button type="button" class="buton" onclick="nextQuestion(8)">Siguiente</button>
+                    </div>
+
+                    <!-- Pregunta 10 -->
+                    <div class="question">
+                        <label for="q10">¿Te gustaría que el colegio ofreciera más actividades extracurriculares?</label><br>
+                        <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="si" name="q10" value="Sí">
+                                <label class="radio-button__label" for="si">
+                                    <span class="radio-button__custom"></span>
+                                    Sí
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="no" name="q10" value="No">
+                                <label class="radio-button__label" for="no">
+                                    <span class="radio-button__custom"></span>
+                                    No
+                                </label>
+                            </div>
+                            <div id="jus"  class="radio-button">
+                                <input type="text"  id="porq" name="q3" value="" placeholder="¿Por qué?">
+                                
+                            </div>
+                        </div><br><br>
+                        <button type="button" class="buton" id="atras" onclick="previousQuestion(9)">Atrás</button>
+                        <button type="submit" class="buton">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let questions = document.querySelectorAll('.question');
+        
+        function nextQuestion(currentIndex) {
+            questions[currentIndex].classList.remove('active');
+            questions[currentIndex + 1].classList.add('active');
+        }
+
+        function prevQuestion(currentIndex) {
+            questions[currentIndex].classList.remove('active');
+            questions[currentIndex - 1].classList.add('active');
+        }
+
+        function finishSurvey() {
+            const surveyData = {};
+            for (let i = 1; i <= 10; i++) {
+                const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                const otherOption = document.querySelector(`input[name="q${i}_other"]`).value;
+                surveyData[`q${i}`] = selectedOption ? selectedOption.value : otherOption;
+            }
+
+            fetch('http://localhost:3000/submitSurvey', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(surveyData)
+            }).then(response => {
+                if (response.ok) {
+                    alert('¡Encuesta enviada con éxito!');
+                } else {
+                    alert('Error al enviar la encuesta.');
+                }
+            });
+        }
+        document.getElementById('botonGiro').addEventListener('click', function() {
+            const elemento = document.getElementById('elemento');
+            elemento.classList.toggle('girado'); 
+        });
+        let currentQuestion = 0; 
+
+
+
+
+    function nextQuestion(step) {
+    
+        questions[currentQuestion].classList.remove('active');
+    
+        
+        currentQuestion = step + 1;
+    
+        
+        questions[currentQuestion].classList.add('active');
+    }
+    
+    
+    function previousQuestion(step) {
+        
+        questions[currentQuestion].classList.remove('active');
+    
+
+        currentQuestion = step - 1;
+    
+        
+        questions[currentQuestion].classList.add('active');
+    }
+    
+    questions[currentQuestion].classList.add('active');
+    
+        
+    </script>
+</body>
+</html>
+
+
+
