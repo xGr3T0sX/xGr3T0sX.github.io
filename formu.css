@@ -152,6 +152,40 @@ button:active {
     transition: box-shadow 0.2s ease-in;
 }
 
+.sig {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.sig:hover {
+    background: rgb(235, 240, 255);
+    box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.815);
+    color: #2821ff;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.sig:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+
 .radio-button-container {
     display: flex;
     flex-direction: column; 
@@ -219,7 +253,7 @@ button:active {
 }
 
 .question {
-    width: max-content;
+    width: 270px;
     font-size: 2px;
     font-family:Roboto;
     display: none;
@@ -520,6 +554,14 @@ input[type="text"] {
 }
 #atras{
     position: absolute;
-    top: 170%;
+    top: 120%;
     right:60%;
+}
+#pq{
+    position: absolute;
+    top: 10%;
+}
+#sii{
+    position: fixed;
+    top: 120%;
 }
