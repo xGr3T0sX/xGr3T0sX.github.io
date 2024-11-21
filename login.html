@@ -9,38 +9,75 @@
 <body>
     <header id="enca">
         <img id="jjr" src="Juan js logo.png">
-        <div class="container">
-        </div>
+        <div class="container"></div>
     </header>
-<div class="container">
-    <div class="card">
-        <form id="surveyForm" class="form">
-            <input placeholder="Documento" name="Documento" class="input" type="number" required>
-            <input placeholder="Grado" name="Grado" class="input" type="number" required>
-            <input placeholder="Nombre" name="Nombre" class="input" type="text" required>
-            <input type="submit" class="button" value="Ir al formulario">
-        </form>
+    <div class="container">
+        <div class="card">
+            <form id="surveyForm" class="form" novalidate>
+
+                <input 
+                    placeholder="Documento (8-10 dígitos)" 
+                    name="Documento" 
+                    class="input" 
+                    type="number" 
+                    min="10000000" 
+                    max="9999999999" 
+                    required>
+                
+                <select name="Grado" class="input" required>
+                    <option value="" disabled selected>Selecciona tu grado</option>
+                    <option value="9a">9A</option>
+                    <option value="9b">9B</option>
+                    <option value="9c">9C</option>
+                    <option value="10a">10A</option>
+                    <option value="10b">10B</option>
+                    <option value="11a">11A</option>
+                    <option value="11b">11B</option>
+                </select>
+                
+                <input 
+                    placeholder="Nombre " 
+                    name="Nombre" 
+                    class="input" 
+                    type="text" 
+                    pattern="[A-Za-z\s]+" 
+                    maxlength="50" 
+                    required>
+                
+                <input type="submit" class="button" value="Ir al formulario">
+            </form>
+        </div>
     </div>
-</div>
 
-<script>
-    document.getElementById('surveyForm').addEventListener('submit', function(event) {
-        event.preventDefault(); 
-        
-        
-        const nombre = document.querySelector('input[name="Nombre"]').value;
-        const grado = document.querySelector('input[name="Grado"]').value;
-        const documento = document.querySelector('input[name="Documento"]').value;
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
 
-        
-        if (nombre && grado && documento) {
-            
-            window.location.href = 'formulario.html'; // 
-        } else {
-            alert('Por favor, completa todos los campos.');
-        }
-    });
-</script>
+            // Obtener valores
+            const documento = document.querySelector('input[name="Documento"]').value;
+            const grado = document.querySelector('select[name="Grado"]').value;
+            const nombre = document.querySelector('input[name="Nombre"]').value;
 
+            // Validaciones adicionales en JavaScript
+            if (!/^\d{8,10}$/.test(documento)) {
+                alert('El documento debe tener entre 8 y 10 dígitos.');
+                return;
+            }
+
+            if (!grado) {
+                alert('Por favor, selecciona tu grado.');
+                return;
+            }
+
+            if (!/^[A-Za-z\s]+$/.test(nombre)) {
+                alert('El nombre solo debe contener letras.');
+                return;
+            }
+
+            // Si todo es válido, redirigir al formulario
+            window.location.href = 'formulario.html'; 
+        });
+    </script>
 </body>
 </html>
+
