@@ -1,4 +1,5 @@
 * {
+    list-style-type: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -189,7 +190,6 @@ nav ul li:hover::after {
 }
 
 @media (max-width: 991px) {
-
     .showcase,
     .showcase header {
         padding: 40px;
@@ -202,6 +202,13 @@ nav ul li:hover::after {
     .text h3 {
         font-size: 2em;
     }
+    #vd {
+        width: 100vw; 
+        height: 100vh; 
+        object-fit: cover;            object-position: center;
+        
+    }
+
 }
 #enca{
     background:linear-gradient(#028dffe7, #d7cff600);
@@ -301,7 +308,7 @@ button:hover:before {
     left: 0;
     justify-content: flex-end;
     border-radius: 5px 0px 0p 0px;
-    background-color: #ffffff;
+    background-color: #887ef5;
   }
   
   .card::after {
@@ -396,4 +403,40 @@ button:hover:before {
     top: 10px;
     width: 70px;
     font-size: 15px;
+}
+footer {
+    background-color: #ffffff; 
+    color: #2b00ff; 
+    padding: 20px 50px;
+    text-align: center;
+    position: relative;
+    top: 100%;
+    width: 100%;
+    font-size: 14px;
+    border-top: 2px solid #4621dc; 
+    z-index: 1000;
+}
+
+footer .social-icons {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4621dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    background-color: #03a9f4;
 }
