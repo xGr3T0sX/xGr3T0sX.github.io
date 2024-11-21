@@ -91,7 +91,6 @@ body{
   padding: 12px;
   gap: 12px;
   border-radius: 8px;
-  cursor: pointer;
 }
 
 .card::before {
@@ -296,4 +295,10 @@ nav ul li:hover::after {
 #ie{
   position: absolute;
   left: 60%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
